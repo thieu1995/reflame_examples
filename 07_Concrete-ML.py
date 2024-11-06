@@ -46,7 +46,7 @@ regressors = {
     "GBR": GradientBoostingRegressor(n_estimators=75, learning_rate=0.5, max_depth=3, random_state=42),
     "MLP": MLPRegressor(alpha=1, max_iter=750, hidden_layer_sizes=(25,), activation="relu", random_state=42),
     "FLNN": FlnnRegressor(expand_name="laguerre", n_funcs=3, act_name="tanh",
-                          obj_name="MSE", max_epochs=750, batch_size=32, optimizer="SGD", verbose=True)
+                          obj_name="MSE", max_epochs=750, batch_size=32, optimizer="SGD", verbose=False)
 }
 
 def train_and_evaluate_model(name, model):
