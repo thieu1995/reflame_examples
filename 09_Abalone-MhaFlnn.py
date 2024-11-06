@@ -22,7 +22,7 @@ Path(PATH_SAVE).mkdir(parents=True, exist_ok=True)
 
 ## Load data object
 df = fetch_ucirepo(id=1)
-X = df.data.features.values
+X = df.data.features.values[:, 1:]
 y = df.data.targets.values
 data = Data(X, y, name=DATA_NAME)
 
