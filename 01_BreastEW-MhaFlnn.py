@@ -33,14 +33,15 @@ data.X_test = scaler_X.transform(data.X_test)
 data.y_train, scaler_y = data.encode_label(data.y_train)
 data.y_test = scaler_y.transform(data.y_test)
 
-list_optimizers = ("BaseGA", "OriginalAVOA", "OriginalARO", "OriginalCDO", "OriginalRUN", "OriginalINFO")
+# list_optimizers = ("OriginalAVOA", "OriginalARO", "OriginalRUN", "OriginalINFO", "OriginalTLO", "OriginalSHADE")
+list_optimizers = ("OriginalTLO", "OriginalSHADE")
 list_paras = [
-    {"name": "GA-FLNN", "epoch": EPOCH, "pop_size": POP_SIZE},
-    {"name": "AVOA-FLNN", "epoch": EPOCH, "pop_size": POP_SIZE},
-    {"name": "ARO-FLNN", "epoch": EPOCH, "pop_size": POP_SIZE},
-    {"name": "CDO-FLNN", "epoch": EPOCH, "pop_size": POP_SIZE},
-    {"name": "RUN-FLNN", "epoch": EPOCH, "pop_size": POP_SIZE},
-    {"name": "INFO-FLNN", "epoch": EPOCH, "pop_size": POP_SIZE},
+    # {"name": "AVOA-FLNN", "epoch": EPOCH, "pop_size": POP_SIZE},
+    # {"name": "ARO-FLNN", "epoch": EPOCH, "pop_size": POP_SIZE},
+    # {"name": "RUN-FLNN", "epoch": EPOCH, "pop_size": POP_SIZE},
+    # {"name": "INFO-FLNN", "epoch": EPOCH, "pop_size": POP_SIZE},
+    {"name": "TLO-FLNN", "epoch": EPOCH, "pop_size": POP_SIZE},
+    {"name": "SHADE-FLNN", "epoch": EPOCH, "pop_size": POP_SIZE},
 ]
 
 

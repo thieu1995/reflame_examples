@@ -27,12 +27,28 @@ def get_metrics(data_name, pathfile, model_names):
     test_df.to_csv(f"history/{data_name}-test.csv", index=False)
 
 
-model_names = ["SVC", "KNC", "DTC", "RFC", "ABC", "GBC", "MLP", "FLNN",
-               "GA-FLNN", "AVOA-FLNN", "ARO-FLNN", "CDO-FLNN", "RUN-FLNN", "INFO-FLNN"]
+model_names = ["SVC", "DTC", "RFC", "GBC", "MLP", "FLNN",
+               "AVOA-FLNN", "ARO-FLNN", "RUN-FLNN", "INFO-FLNN", "TLO-FLNN", "SHADE-FLNN"]
 
-model_names_rr = ["SVR", "KNR", "DTR", "RFR", "ABR", "GBR", "MLP", "FLNN",
-               "GA-FLNN", "AVOA-FLNN", "ARO-FLNN", "CDO-FLNN", "RUN-FLNN", "INFO-FLNN"]
+model_names_rr = ["SVR", "DTR", "RFR", "GBR", "MLP", "FLNN",
+               "AVOA-FLNN", "ARO-FLNN", "RUN-FLNN", "INFO-FLNN", "TLO-FLNN", "SHADE-FLNN"]
 
-# get_metrics(data_name="BreastEW", pathfile="history/BreastEW", model_names=model_names)
-# get_metrics(data_name="Iris", pathfile="history/Iris", model_names=model_names)
+get_metrics(data_name="BreastEW", pathfile="history/BreastEW", model_names=model_names)
+
+get_metrics(data_name="Heart", pathfile="history/heart", model_names=model_names)
+
+get_metrics(data_name="Iris", pathfile="history/Iris", model_names=model_names)
+
+get_metrics(data_name="Wine", pathfile="history/Wine", model_names=model_names)
+
+get_metrics(data_name="Banknote", pathfile="history/banknote", model_names=model_names)
+
 get_metrics(data_name="MovieRevenue", pathfile="history/MovieRevenue", model_names=model_names_rr)
+
+get_metrics(data_name="Concrete", pathfile="history/Concrete", model_names=model_names_rr)
+
+get_metrics(data_name="Energy", pathfile="history/Energy", model_names=model_names_rr)
+
+get_metrics(data_name="Abalone", pathfile="history/Abalone", model_names=model_names_rr)
+
+get_metrics(data_name="RealEstate", pathfile="history/RealEstate", model_names=model_names_rr)

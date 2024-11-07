@@ -26,7 +26,7 @@ def draw_loss(data_name, pathfile, model_names, verbose=False):
 
     plt.xlabel('Epoch')
     plt.ylabel('Fitness value')
-    plt.title("The fitness value of compared Metaheuristic-based FLNN models")
+    plt.title(f"The fitness value of Metaheuristic-trained FLNN models on {data_name} data.")
     plt.legend()
     plt.grid(True)
     plt.savefig(f"history/{data_name}-loss.png", bbox_inches='tight')
@@ -34,7 +34,16 @@ def draw_loss(data_name, pathfile, model_names, verbose=False):
         plt.show()
 
 
-model_names = ["GA-FLNN", "AVOA-FLNN", "ARO-FLNN", "CDO-FLNN", "RUN-FLNN", "INFO-FLNN"]
+model_names = ["AVOA-FLNN", "ARO-FLNN", "RUN-FLNN", "INFO-FLNN", "TLO-FLNN", "SHADE-FLNN"]
+
 
 draw_loss(data_name="BreastEW", pathfile="history/BreastEW", model_names=model_names)
+draw_loss(data_name="Heart", pathfile="history/heart", model_names=model_names)
 draw_loss(data_name="Iris", pathfile="history/Iris", model_names=model_names)
+draw_loss(data_name="Wine", pathfile="history/Wine", model_names=model_names)
+draw_loss(data_name="Banknote", pathfile="history/banknote", model_names=model_names)
+draw_loss(data_name="MovieRevenue", pathfile="history/MovieRevenue", model_names=model_names)
+draw_loss(data_name="Concrete", pathfile="history/Concrete", model_names=model_names)
+draw_loss(data_name="Energy", pathfile="history/Energy", model_names=model_names)
+draw_loss(data_name="Abalone", pathfile="history/Abalone", model_names=model_names)
+draw_loss(data_name="RealEstate", pathfile="history/RealEstate", model_names=model_names)
